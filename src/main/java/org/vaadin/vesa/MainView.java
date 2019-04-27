@@ -10,7 +10,7 @@ import com.vaadin.flow.router.Route;
 public class MainView extends VerticalLayout {
 
     public MainView() {
-        add(new PaperSlider<Integer>(0));
+        //add(new PaperSlider<>(0));
 
         add(new MyControls());
     }
