@@ -17,7 +17,7 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
  */
 @Tag("my-controls")
 @HtmlImport("my-controls.html")
-//@Uses(IntegerSlider.class)
+@Uses(IntegerSlider.class)
 public class MyControls extends PolymerTemplate<MyControls.MyControlsModel> {
     @Id("label") private Label label;
     @Id("stopButton") private Button stopButton;
@@ -28,7 +28,10 @@ public class MyControls extends PolymerTemplate<MyControls.MyControlsModel> {
      * Creates a new MyControls.
      */
     public MyControls() {
-        positionSlider.getSlider().addValueChangeListener(e -> label.setText("" + (e.getValue() + 100)));
+        //positionSlider.getSlider().addValueChangeListener(e -> label.setText("" + (e.getValue() + 100)));
+        positionSlider.getSlider().addChangeListener(e -> {
+            label.setText("" + e.getSource().getValue());
+        });
     }
 
     /**

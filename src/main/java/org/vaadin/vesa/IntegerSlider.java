@@ -15,7 +15,7 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
  */
 @Tag("integer-slider")
 @HtmlImport("integer-slider.html")
-//@Uses(IntegerPaperSlider.class)
+@Uses(IntegerPaperSlider.class)
 public class IntegerSlider extends PolymerTemplate<IntegerSlider.IntegerSliderModel> {
 
     @Id("slider") private IntegerPaperSlider slider;
