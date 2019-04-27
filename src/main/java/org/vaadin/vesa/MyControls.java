@@ -1,6 +1,7 @@
 package org.vaadin.vesa;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.dependency.Uses;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.polymertemplate.Id;
 import com.vaadin.flow.templatemodel.TemplateModel;
@@ -16,20 +17,18 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
  */
 @Tag("my-controls")
 @HtmlImport("my-controls.html")
+//@Uses(IntegerSlider.class)
 public class MyControls extends PolymerTemplate<MyControls.MyControlsModel> {
-
-    @Id("positionSlider") private IntegerSlider positionSlider;
-    @Id("playButton") private Button playButton;
-    @Id("stopButton") private Button stopButton;
     @Id("label") private Label label;
+    @Id("stopButton") private Button stopButton;
+    @Id("playButton") private Button playButton;
+    @Id("positionSlider") private IntegerSlider positionSlider;
 
     /**
      * Creates a new MyControls.
      */
     public MyControls() {
-        positionSlider.getSlider().addValueChangeListener(e -> {
-            label.setText("" + e.getValue());
-        });
+        positionSlider.getSlider().addValueChangeListener(e -> label.setText("" + (e.getValue() + 100)));
     }
 
     /**

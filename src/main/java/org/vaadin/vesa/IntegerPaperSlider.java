@@ -6,14 +6,10 @@ import com.vaadin.flow.component.dependency.HtmlImport;
 
 @Tag("paper-slider")
 @HtmlImport("bower_components/paper-slider/paper-slider.html")
-public class PaperSlider<T extends Number> extends AbstractSinglePropertyField<PaperSlider<T>, T> {
+public class IntegerPaperSlider extends AbstractSinglePropertyField<IntegerPaperSlider, Integer> {
 
-    public PaperSlider() {
-        super("value", null, false);
-    }
-
-    public PaperSlider(T defaultValue) {
-        super("value", defaultValue, false);
+    public IntegerPaperSlider() {
+        super("value", 0, false);
     }
 
     public void setPin(boolean pin) {
