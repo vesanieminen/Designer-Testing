@@ -1,7 +1,7 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
 <link rel="import" href="bower_components/paper-slider/paper-slider.html">
 
-<dom-module id="integer-slider">
+<dom-module id="slider-with-caption">
     <template>
 <style include="shared-styles">
             :host {
@@ -13,9 +13,9 @@
 </template>
 
     <script>
-        class IntegerSlider extends Polymer.Element {
+        class SliderWithCaption extends Polymer.Element {
             static get is() {
-                return 'integer-slider';
+                return 'slider-with-caption';
             }
 
             static get properties() {
@@ -32,6 +32,6 @@
                 };
             }
         }
-        customElements.define(IntegerSlider.is, IntegerSlider);
+        customElements.define(SliderWithCaption.is, SliderWithCaption);
     </script>
 </dom-module>

@@ -17,12 +17,12 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
  */
 @Tag("my-controls")
 @HtmlImport("my-controls.html")
-@Uses(IntegerSlider.class)
+@Uses(SliderWithCaption.class)
 public class MyControls extends PolymerTemplate<MyControls.MyControlsModel> {
     @Id("label") private Label label;
     @Id("stopButton") private Button stopButton;
     @Id("playButton") private Button playButton;
-    @Id("positionSlider") private IntegerSlider positionSlider;
+    @Id("positionSlider") private SliderWithCaption positionSlider;
 
     /**
      * Creates a new MyControls.

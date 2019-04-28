@@ -13,24 +13,21 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
  * Designer will add and remove fields with @Id mappings but
  * does not overwrite or otherwise change this file.
  */
-@Tag("integer-slider")
-@HtmlImport("integer-slider.html")
+@Tag("slider-with-caption")
+@HtmlImport("slider-with-caption.html")
 @Uses(PaperSlider.class)
-public class IntegerSlider extends PolymerTemplate<IntegerSlider.IntegerSliderModel> {
+public class SliderWithCaption extends PolymerTemplate<SliderWithCaption.SliderWithCaptionModel> {
 
     @Id("slider") private PaperSlider slider;
 
-    /**
-     * Creates a new DoubleSlider.
-     */
-    public IntegerSlider() {
+    public SliderWithCaption() {
         getModel().setCaption("hello!");
     }
 
     /**
-     * This model binds properties between DoubleSlider and double-slider
+     * This model binds properties between SliderWithCaption and slider-with-caption
      */
-    public interface IntegerSliderModel extends TemplateModel {
+    public interface SliderWithCaptionModel extends TemplateModel {
         String getCaption();
         void setCaption(String caption);
     }
