@@ -15,10 +15,10 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
  */
 @Tag("integer-slider")
 @HtmlImport("integer-slider.html")
-@Uses(IntegerPaperSlider.class)
+@Uses(PaperSlider.class)
 public class IntegerSlider extends PolymerTemplate<IntegerSlider.IntegerSliderModel> {
 
-    @Id("slider") private IntegerPaperSlider slider;
+    @Id("slider") private PaperSlider slider;
 
     /**
      * Creates a new DoubleSlider.
@@ -35,11 +35,11 @@ public class IntegerSlider extends PolymerTemplate<IntegerSlider.IntegerSliderMo
         void setCaption(String caption);
     }
 
-    public IntegerPaperSlider getSlider() {
+    public PaperSlider getSlider() {
         return slider;
     }
 
-    public void setSlider(IntegerPaperSlider slider) {
+    public void setSlider(PaperSlider slider) {
         this.slider = slider;
     }
 

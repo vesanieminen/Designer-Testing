@@ -11,9 +11,9 @@ import com.vaadin.flow.router.Route;
 public class MainView extends VerticalLayout {
 
     public MainView() {
-        IntegerPaperSlider integerPaperSlider = new IntegerPaperSlider();
-        integerPaperSlider.addChangeListener(e -> Notification.show("" +e.getSource().getValue()));
-        add(integerPaperSlider);
+        PaperSlider paperSlider = new PaperSlider();
+        paperSlider.addChangeListener(e -> Notification.show("" +e.getSource().getValue()));
+        add(paperSlider);
 
         add(new MyControls());
     }
