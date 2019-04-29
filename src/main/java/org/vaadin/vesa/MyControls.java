@@ -28,7 +28,7 @@ public class MyControls extends PolymerTemplate<MyControls.MyControlsModel> {
      * Creates a new MyControls.
      */
     public MyControls() {
-        positionSlider.getSlider().addValueChangeListener(e -> label.setText("" + e.getValue().intValue()));
+        //positionSlider.getSlider().addValueChangeListener(e -> label.setText("" + e.getValue().intValue()));
     }
 
     /**

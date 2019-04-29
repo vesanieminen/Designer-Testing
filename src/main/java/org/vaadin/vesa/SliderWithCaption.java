@@ -18,7 +18,7 @@ import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
 @Uses(PaperSlider.class)
 public class SliderWithCaption extends PolymerTemplate<SliderWithCaption.SliderWithCaptionModel> {
 
-    @Id("slider") private PaperSlider slider;
+    //@Id("slider") private PaperSlider slider;
 
     public SliderWithCaption() {
         getModel().setCaption("hello!");
@@ -32,12 +32,12 @@ public class SliderWithCaption extends PolymerTemplate<SliderWithCaption.SliderW
         void setCaption(String caption);
     }
 
-    public PaperSlider getSlider() {
-        return slider;
-    }
+    //public PaperSlider getSlider() {
+    //    return slider;
+    //}
 
-    public void setSlider(PaperSlider slider) {
-        this.slider = slider;
-    }
+    //public void setSlider(PaperSlider slider) {
+    //    this.slider = slider;
+    //}
 
 }
