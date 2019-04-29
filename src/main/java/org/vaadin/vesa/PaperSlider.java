@@ -7,7 +7,7 @@ import com.vaadin.flow.component.dependency.HtmlImport;
 
 @Tag("paper-slider")
 @HtmlImport("bower_components/paper-slider/paper-slider.html")
-public class PaperSlider extends AbstractSinglePropertyField<PaperSlider, Double> implements HasStyle {
+public class PaperSlider extends AbstractSinglePropertyField<PaperSlider, Double> {
 
     public static final double SCALE_MULTIPLIER = 1.0;
 
@@ -17,9 +17,8 @@ public class PaperSlider extends AbstractSinglePropertyField<PaperSlider, Double
 
     public PaperSlider(double min, double max, double initial) {
         super("value", initial, false);
-        getElement().setProperty("max", max * SCALE_MULTIPLIER);
-        getElement().setProperty("min", min * SCALE_MULTIPLIER);
-        getStyle().set("width", "100px");
+        setMinValue(min * SCALE_MULTIPLIER);
+        setMaxValue(max * SCALE_MULTIPLIER);
     }
 
     public void setMinValue(double min) {
