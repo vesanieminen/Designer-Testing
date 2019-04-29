@@ -7,3 +7,5 @@ Run using `mvn jetty:run` and open [http://localhost:8080](http://localhost:8080
 
 ## Workaround
 This can be fixed by commenting out code like this: https://github.com/vesanieminen/Designer-Testing/commit/980a31e7cad0a68bac5c6a4cc684a255a5ed4f5b
+
+The workaround can be tested by checking out the branch called fix_for_outline
