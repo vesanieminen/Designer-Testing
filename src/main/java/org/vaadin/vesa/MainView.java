@@ -12,7 +12,7 @@ public class MainView extends VerticalLayout {
 
     public MainView() {
         PaperSlider paperSlider = new PaperSlider();
-        paperSlider.addChangeListener(e -> Notification.show("" +e.getSource().getValue()));
+        paperSlider.addValueChangeListener(e -> Notification.show("" +e.getValue()));
         add(paperSlider);
 
         add(new MyControls());
